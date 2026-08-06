@@ -2,3 +2,15 @@
 <p>Edad: {{ edad }}</p>
 <p>Estado: {{ activo ? 'Activo' : 'Inactivo' }}</p>
 <p>En 5 años: {{ edad + 5 }}    </p>
+
+<!-- Cambiar el src de una imagen dinamicamente -->
+<img [src]="urlFoto" [alt]="nombre" width="300" height="300" />
+
+<!-- Deshabilitar un boton segun una condicion -->
+<button [disabled]="!activo">Enviar</button>
+
+<!-- Agregar una clase CSS condicionalmente -->
+<div [class.activo]="activo">Contenido</div>
+
+<!-- Cambiar un estilo inline -->
+<p [style.color]="activo ? 'green' : 'red'">Estado</p>
